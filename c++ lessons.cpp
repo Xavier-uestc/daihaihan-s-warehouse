@@ -7,7 +7,7 @@
 #include<math.h>
 using namespace std;
 
-int main()
+int main()//这是变更后的！！！！！
 {
     
     float n{0};//本金
