@@ -8,20 +8,23 @@
 using namespace std;
 int main()
 {
-    float n;//本金
-    float rate;//利率
+    float n{0};//本金
+    float rate{0};//利率
+    int year{0};
     cout << "请输入本金：\n";
     cin >> n;
     cout << "请输入年利率：(小数形式)\n";
     cin >> rate;
+    cout << "请输入存钱时间（年）\n";
+    cin >> year;
     cout << "你的本金为:"; cout << n<<endl;
     cout << "年利率为:"; cout << rate << endl<<endl;
-    float a[10]{ 0 };
-    for (int i = 0; i < 10; i++)
+    float a[10000]{ 0 };
+    for (int i = 0; i < year; i++)
     {
         float base =(1 + rate);
         a[i] = n*pow(base, i+1);
-        cout << "第"; cout << i+1;cout<< "年的余额：";
+        cout << "第"<< i+1<< "年的余额：";
         cout << a[i]<<endl;
     }
     return 0;
